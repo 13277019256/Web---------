@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/Tudo.css" />
+	    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	</head>
+
+	<body>
+<div class="navbar navbar-inverse">
+  <div class="navbar-inner">
+    <a class="brand" href="#">Tudo</a>
+    <ul class="nav">
+      <li class="active"><a href="#">首页</a></li>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Linkin</a></li>
+      <li><a href="#">Github</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+<div id="body">
+			<!--一个标题（tudo名称），
+		一个内容区（具体描述tudo的细节），
+		一个标签（可选，用来表明该tudo所属的类别），
+		一个时间范围（分三类，今日待办，明日待办，未来）-->
+<div id="container" class="response">
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span5">
+		                  <div id="addtudo" class="divclass bgleft">
+	<!--添加tudo-->
+	<h1>ADD TUDO</h1>
+
+	<div>Tudo名称：<input type="text" id="tudoname" />
+	</div>
+	<!--标题-->
+
+	<div class="parent">
+		Tudo描述：<textarea class="son" id="tudodescription"></textarea>
+	</div>
+	<!-- 内容区-->
+
+	<div>添加标签:
+		<select id="isadd" onchange="isShow()">
+			<option value="yes">添加</option>
+			<option value="no" selected>不添加</option>
+		</select>
+
+		<input type="text" id="label" value="" />
+
+	</div>
+	<!--标签-->
+	<div>
+		标签为： 学习，工作，娱乐的可以聚类，其余的归为一类
+	</div>
+	<div>完成时间：
+		<select id="finishtime" class="">
+			<option value="今日待办">今日待办</option>
+			<option value="明日待办">明日待办</option>
+			<option value="未来">未来</option>
+			<option value="--" selected="">--</option>
+		</select>
+	</div>
+	<!--时间范围-->
+
+	<center><button class="button btn btn-primary" onclick="getTudo()">添加Tudo</button></center>
+
+</div>
+
+		    </div>
+		   <div class="span7">
+			    		  <div class="divclass bgrightone">
+			<h1>任务箱</h1>
+			<button onclick="showtask()" class="btn btn-info">显示添加任务框</button>
+			<button onclick="closetask()" class="btn btn-primary">关闭添加任务框</button>
+			<button onclick="synchronizeall()" class="btn btn-success">刷新列表</button>
+			<div id="taskcase" >
+				
+
+			</div>
+
+		</div>
+		                  <!--任务箱-->
+		                  <div class="divclass bgrighttwo">
+			<h1>临时任务箱</h1>
+			<button onclick="showtask()" class="btn btn-info">显示添加任务框</button>
+			<button onclick="closetask()" class="btn btn-primary">关闭添加任务框</button>
+			<button onclick="synchronizeall()" class="btn btn-success">刷新列表</button>
+
+			<div id="temptaskcase">
+
+			</div>
+		</div>
+		                  <!--临时任务箱-->
+		                  <div class="divclass bgrightthree">
+			<h1>标签任务列表</h1>
+			<button onclick="showtask()" class="btn btn-info">显示添加任务框</button>
+			<button onclick="closetask()" class="btn btn-primary">关闭添加任务框</button>
+			<button onclick="synchronizeall()" class="btn btn-success">刷新列表</button>
+
+			<div id="labeltaskcase">
+
+			</div>
+		</div>
+		                  <!--标签任务列表-->
+
+		   </div>
+		</div>
+		
+		
+	</div>
+	
+	
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+<div id="footer" >
+	<center>© Creator 2017</center>
+</div>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</body>
+	<script src="js/loadfinal.js"></script>
+
+</html>
